@@ -1,0 +1,13 @@
+@echo off
+echo Starting CorPredict-AI Clinical Engine...
+
+echo Activating Python Backend API...
+start /B python app.py
+
+echo Compiling Java Medical UI...
+javac CorPredictUI.java
+
+timeout /t 3 /nobreak > NUL
+
+echo Launching Java Medical UI...
+java CorPredictUI
